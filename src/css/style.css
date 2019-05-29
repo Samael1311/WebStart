@@ -92,6 +92,9 @@ img {
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding: 20px 0 20px 0;
+  }
   .navbar__contacts {
     display: none;
   }
@@ -141,7 +144,6 @@ img {
   font-size: 41px;
   font-weight: 700;
   line-height: 55px;
-  margin-bottom: 40px;
 }
 
 .hero-text__subtitle {
@@ -149,6 +151,7 @@ img {
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 70px;
+  margin-top: 40px;
 }
 
 .hero-list {
@@ -208,14 +211,19 @@ img {
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding-top: 46px;
+  }
   .hero-text__title {
     font-size: 24px;
     line-height: 1.4;
-    margine-bottom: 15px;
+    margin-top: 0px;
+    margine-bottom: 13px;
   }
   .hero-text__subtitle {
     font-size: 16px;
     margin-bottom: 28px;
+    margin-top: 0;
   }
   .hero-list__text {
     font-size: 12px;
@@ -225,6 +233,8 @@ img {
   }
   .hero-list__image {
     margin-right: 15px;
+    width: 40px;
+    height: 40px;
   }
 }
 /*# sourceMappingURL=style.css.map */
