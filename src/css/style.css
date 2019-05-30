@@ -379,10 +379,17 @@ img {
 .offer__input {
   margin-bottom: 30px;
   width: 240px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .offer__input:first-child {
   margin-right: 10px;
+}
+
+.offer__input:focus {
+  outline: none;
+  border: 1px solid #ff4500;
 }
 
 .offer__button {
