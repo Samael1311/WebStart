@@ -137,21 +137,23 @@ img {
 .hero-text {
   -ms-flex-preferred-size: 45%;
       flex-basis: 45%;
-  padding-right: 120px;
+  padding-right: 90px;
 }
 
 .hero-text__title {
   font-size: 41px;
   font-weight: 700;
   line-height: 55px;
+  margin-bottom: 10px;
 }
 
 .hero-text__subtitle {
   display: inline-block;
   font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 70px;
-  margin-top: 40px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #333333;
+  line-height: 65px;
 }
 
 .hero-list {
@@ -188,9 +190,13 @@ img {
 
 .hero-list__text {
   max-width: 300px;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
-.hero-image {
+.hero-image img {
   -webkit-box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.05), 16px 22px 35px rgba(0, 0, 0, 0.05);
           box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.05), 16px 22px 35px rgba(0, 0, 0, 0.05);
 }
