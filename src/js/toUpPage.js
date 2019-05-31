@@ -9,14 +9,24 @@ $(document).ready(() => {
 
 	});
 
+	let currentScroll =0,
+	nextScroll;
+
 	$(window).scroll(() => {
-		if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+		// if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+		// 	btnUp.addClass('up_active');
+		// 	console.log('конец');
+		// } else {
+		// 	btnUp.removeClass('up_active');
+		// }
+	nextScroll = $(window).scrollTop();
+
+		if(nextScroll > currentScroll){
 			btnUp.addClass('up_active');
-			console.log('конец');
 		} else {
 			btnUp.removeClass('up_active');
 		}
-
+		currentScroll = nextScroll;
 
 	});
 
