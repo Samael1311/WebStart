@@ -7,11 +7,17 @@ $(document).ready(()=>{
 
 	});
 
-	if($(window).scroll() + $(window).height() == $(document).height()){
-		btn.addClass('up_active');
-	} else {
-		btn.removeClass('up_active');
-	}
+		$(window).scroll(()=>{
+			if($(window).scrollTop() == $(document).height() - $(window).height()){
+				btnUp.addClass('up_active');
+				console.log('конец');
+			} else {
+				btnUp.removeClass('up_active');
+			}
+				
+			
+		});
+	
 
 
 })

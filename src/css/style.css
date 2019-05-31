@@ -91,13 +91,13 @@ img {
   }
 }
 
-#up {
+.up {
   position: absolute;
   right: 0;
   display: none;
 }
 
-#up_active {
+.up_active {
   display: block;
 }
 
