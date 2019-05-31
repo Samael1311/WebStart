@@ -7,5 +7,11 @@ $(document).ready(()=>{
 
 	});
 
+	if($(window).scroll() + $(window).height() == $(document).height()){
+		btn.addClass('up_active');
+	} else {
+		btn.removeClass('up_active');
+	}
+
 
 })

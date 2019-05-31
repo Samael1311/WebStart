@@ -91,6 +91,16 @@ img {
   }
 }
 
+#up {
+  position: absolute;
+  right: 0;
+  display: none;
+}
+
+#up_active {
+  display: block;
+}
+
 .navbar {
   padding: 8px 0px;
 }
