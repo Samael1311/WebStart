@@ -3,7 +3,7 @@ $(document).ready(function(){
 			modal = $('.modal'),
 			close = $('#close');
 
-	btn.on('click', ()=> {
+	btn.on('click' , ()=> {
 		modal.addClass('modal_active');
 	});
 

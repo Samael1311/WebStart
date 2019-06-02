@@ -451,6 +451,10 @@ img {
   .offer__button {
     font-size: 12px;
   }
+  .offer__self {
+    width: 50%;
+    margin-left: 26px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -485,6 +489,10 @@ img {
   .offer__manager {
     width: 85%;
     margin-bottom: 10px;
+  }
+  .offer__self {
+    width: 85%;
+    margin: 0px;
   }
 }
 
