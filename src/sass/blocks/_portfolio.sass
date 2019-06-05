@@ -2,25 +2,30 @@
 	background: $background-color url('../img/portfolio/portfolio-pattern.jpg') repeat-y center left
 	background-size: 50%
 	&__title
-		max-width: 790px
 		margin: auto
 		margin-bottom: 95px
 		font-size: 30px
 		+bold
 		line-height: 45px
+		max-width: 787px
 	&__arrows
 		max-width: 120px
 		margin: auto
-		margin-top: 68px
+		margin-top: 48px
 		display: flex
 		justify-content: space-between
 .slider
 	&__image
 		margin: auto
+		max-width: 370px
 	&__item
 		outline: none
+		//display: inline-block
+	// &-size
+	// 	display: flex
 @media (max-width: 567px)
 	.portfolio
+		background: $background-color
 		&__title
 			font-size: 18px
 			line-height: 21px
@@ -31,9 +36,10 @@
 			padding-top: 45px
 			padding-bottom: 60px
 		&__arrows
-			margin-top: 46px
+			margin-top: 26px
 	.slider
 		&__image
 			max-width: 246px
+	
 
 		
