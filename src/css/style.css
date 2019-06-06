@@ -108,7 +108,7 @@ img {
   cursor: pointer;
 }
 
-div .invalid {
+.brif__input.invalid {
   border: 1px solid red;
 }
 
