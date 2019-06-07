@@ -1158,6 +1158,110 @@ img {
   }
 }
 
+.footer {
+  position: relative;
+}
+
+.map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+}
+
+.contacts-size {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding-top: 90px;
+  padding-left: 210px;
+}
+
+.contacts__title {
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+  margin-bottom: 95px;
+  margin-top: 2px;
+  max-width: 290px;
+}
+
+.contacts-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.contacts-list {
+  padding: 0;
+  list-style: none;
+  max-width: 270px;
+}
+
+.contacts-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 39px;
+}
+
+.contacts-list__icon {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 23px;
+}
+
+.contacts-list__text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.contacts-list__text a {
+  text-decoration: none;
+  color: #333333;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.contacts-list__text span {
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+@media (max-width: 576px) {
+  .map {
+    top: 100%;
+    width: 100%;
+  }
+  .contacts__title {
+    font-size: 18px;
+    line-height: 20px;
+    width: 240px;
+    margin-bottom: 40px;
+  }
+  .contacts-size {
+    -ms-flex-preferred-size: 95%;
+        flex-basis: 95%;
+    padding-left: 0px;
+    padding-top: 60px;
+    padding-bottom: 15px;
+  }
+  .contacts-list__text {
+    line-height: 23px;
+  }
+  .contacts-list__icon {
+    margin-right: 13px;
+  }
+}
+
 .modal {
   position: fixed;
   left: 0;
