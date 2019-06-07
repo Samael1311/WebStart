@@ -13,8 +13,13 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=f2b2a70b-8fea-494f-9788-9097b85501f6&lang=ru_RU" type="text/javascript">
-	</script>   
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=f2b2a70b-8fea-494f-9788-9097b85501f6&lang=ru_RU"
+		type="text/javascript">
+	</script>
+	<!-- Yandex.Metrika counter -->
+	<script src="js/metrics.js"></script> <noscript>
+		<div><img src="https://mc.yandex.ru/watch/53975824" style="position:absolute; left:-9999px;" alt="" /></div>
+	</noscript> <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
@@ -258,29 +263,34 @@
 		</section>
 		<!-- /.section steps -->
 		<section class="section qualities qualities-mini">
-				<div class="qualities-header"><h2 class="section-title qualities-header__title">Ремонт обойдется Вам дешевле, так как <br>мы используем качественные материалы по оптовым ценам
-					</h2></div>
-				<div class="container">
-				
-					<div class="qualities-block">
-						<div class="quality__item">
-							<span class="quality__text">Поможем закупить все материалы по оптовым ценам у проверенных поставщиков
-							</span>
-							<img class="quality__image" src="./img/quality/quality1.png" alt="image1">
-						</div>
-						<div class="quality__item">
-								<span class="quality__text">Мы дадим Вам <span>максимальные скидки</span>	у наших партнеров для закупки материалов оптом
-									</span>
-							<img class="quality__image" src="./img/quality/quality2.png" alt="image2">
-						</div>
-						<div class="quality__item">
-								<span class="quality__text">Все, что не сможете найти в городе - поможем заказать <span>у проверенных поставщиков</span>			
-									</span>
-							<img class="quality__image" src="./img/quality/quality3.png" alt="image3">
-						</div>
+			<div class="qualities-header">
+				<h2 class="section-title qualities-header__title">Ремонт обойдется Вам дешевле, так как <br>мы используем
+					качественные материалы по оптовым ценам
+				</h2>
+			</div>
+			<div class="container">
+
+				<div class="qualities-block">
+					<div class="quality__item">
+						<span class="quality__text">Поможем закупить все материалы по оптовым ценам у проверенных поставщиков
+						</span>
+						<img class="quality__image" src="./img/quality/quality1.png" alt="image1">
+					</div>
+					<div class="quality__item">
+						<span class="quality__text">Мы дадим Вам <span>максимальные скидки</span> у наших партнеров для закупки
+							материалов оптом
+						</span>
+						<img class="quality__image" src="./img/quality/quality2.png" alt="image2">
+					</div>
+					<div class="quality__item">
+						<span class="quality__text">Все, что не сможете найти в городе - поможем заказать <span>у проверенных
+								поставщиков</span>
+						</span>
+						<img class="quality__image" src="./img/quality/quality3.png" alt="image3">
 					</div>
 				</div>
-			</section>
+			</div>
+		</section>
 		<section class="section brif brif-mini">
 			<div class="container container-mini">
 				<div class="brif-block">
@@ -338,17 +348,17 @@
 						</span>
 						<li class="contacts-list__item">
 							<span class="contacts-list__icon">
-									<img src="img/footer/clock-with-white-face.png" alt="clock">
+								<img src="img/footer/clock-with-white-face.png" alt="clock">
 							</span>
 							<span class="contacts-list__text"> Режим работы:<br>
-									<span>с 9:00 до 18:00</span></span>
+								<span>с 9:00 до 18:00</span></span>
 						</li>
 						<li class="contacts-list__item">
 							<span class="contacts-list__icon">
-									<img src="img/footer/phone-call-button.png" alt="call">
+								<img src="img/footer/phone-call-button.png" alt="call">
 							</span>
-							<span class="contacts-list__text">Телефон:  <br>  
-									<a href="tel: + 7(495)42-251-31">+ 7 (495) 42-251-31</a></span>
+							<span class="contacts-list__text">Телефон: <br>
+								<a href="tel: + 7(495)42-251-31">+ 7 (495) 42-251-31</a></span>
 						</li>
 					</ul>
 				</div>
@@ -382,42 +392,41 @@
 	<script src="js/validation.js"></script>
 
 	<script type="text/javascript">
-		ymaps.ready(init);    
-		function init(){ 
+		ymaps.ready(init);
+
+		function init() {
 
 		}
 		ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-            center: [55.611409, 37.201122],
-            zoom: 9
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
+			var myMap = new ymaps.Map('map', {
+					center: [55.611409, 37.201122],
+					zoom: 9
+				}, {
+					searchControlProvider: 'yandex#search'
+				}),
 
-        
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-        ),
 
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-						
-            hintContent: 'Ремонт квартир. Качественно и быстро! ',
-            balloonContent: 'Москва ул. Ленина, д. 10, корпус 2, оф. 308'
-        }, {
-           
-            iconLayout: 'default#image',     
-            iconImageHref: 'img/map-img.png',
-            iconImageSize: [30, 30]
-            //iconImageOffset: [-5, -38]
+				MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+					'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+				),
+
+				myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+
+					hintContent: 'Ремонт квартир. Качественно и быстро! ',
+					balloonContent: 'Москва ул. Ленина, д. 10, корпус 2, оф. 308'
+				}, {
+
+					iconLayout: 'default#image',
+					iconImageHref: 'img/map-img.png',
+					iconImageSize: [30, 30]
+					//iconImageOffset: [-5, -38]
 				})
-				
-    myMap.geoObjects
-        .add(myPlacemark);
-        
-});
 
-		
-</script>
+			myMap.geoObjects
+				.add(myPlacemark);
+
+		});
+	</script>
 
 </body>
 
