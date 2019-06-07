@@ -13,6 +13,8 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=f2b2a70b-8fea-494f-9788-9097b85501f6&lang=ru_RU" type="text/javascript">
+	</script>   
 </head>
 
 <body>
@@ -296,9 +298,9 @@
 	</main>
 	<footer class="footer">
 		<div class="map" id="map">
-			<script type="text/javascript" charset="utf-8" async
+			<!-- <script type="text/javascript" charset="utf-8" async
 				src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A753f55a06faa9cab53b9fb9f0a8eb42b9ddb07002aa37aa152b6cbd27d48424e&amp;width=100%25&amp;height=640&amp;lang=ru_UA&amp;scroll=false">
-			</script>
+			</script> -->
 		</div>
 		<div class="container">
 			<div class="contacts-block">
@@ -355,6 +357,44 @@
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/jquery.maskedinput.min.js"></script>
 	<script src="js/validation.js"></script>
+
+	<script type="text/javascript">
+		ymaps.ready(init);    
+		function init(){ 
+
+		}
+		ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [55.611409, 37.201122],
+            zoom: 9
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+        
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+						
+            hintContent: 'Ремонт квартир. Качественно и быстро! ',
+            balloonContent: 'Москва ул. Ленина, д. 10, корпус 2, оф. 308'
+        }, {
+           
+            iconLayout: 'default#image',     
+            iconImageHref: 'img/map-img.png',
+            iconImageSize: [30, 30]
+            //iconImageOffset: [-5, -38]
+				})
+				
+    myMap.geoObjects
+        .add(myPlacemark);
+        
+});
+
+		
+</script>
 
 </body>
 
