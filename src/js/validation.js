@@ -36,16 +36,44 @@ new WOW().init();
 					},
 					errorClass: "invalid",
 					validClass: "success",
-					errorElement: "div"
-					
+					errorElement: "div"			
 
 				});
+				$('#offer-form').validate({
+					rules: {
+						username: {
+							required: true,
+							rangelength: [2, 15]
+						},
+						phone:{
+							required: true
+						}
+					},
+					messages: {
+						username: {
+							required: "Заполните поле",
+							rangelength: jQuery.validator.format("Количесвто символов должно составлять от 2 до 15")
+						},
+						phone: {
+						required: "Заполните поле"
+		
+					}
+					},
+					errorClass: "invalid",
+					validClass: "success",
+					errorElement: "div"			
+
+				});
+
 
 				$('.phone').mask('8 (999) 999-99-99');
 
-				let inputName = document.querySelector('.input-name');
-				inputName.addEventListener('keyup', function(e){
-					e.target.value = e.target.value.replace(/[^a-z,A-Z,а-я,А-Я]/g,'');
+				let inputName = document.querySelectorAll('.input-name');
+				inputName.forEach(e => {
+					e.addEventListener('keyup', function(e){
+						e.target.value = e.target.value.replace(/[^a-z,A-Z,а-я,А-Я]/g,'');
+					});
 				});
+			
 					
 		})

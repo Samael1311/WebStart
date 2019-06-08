@@ -430,7 +430,7 @@ img {
 
 .offer__input:focus {
   outline: none;
-  border: 1px solid #ff4500;
+  border: 1px solid #f58607;
 }
 
 .offer__button {
@@ -543,6 +543,10 @@ img {
   .offer-mini {
     padding-bottom: 47px;
   }
+}
+
+.offer__input.invalid {
+  border: 1px solid red;
 }
 
 .portfolio {
@@ -1087,7 +1091,7 @@ img {
 
 @media (max-width: 320px) {
   .brif {
-    background-size: 100% 44.5%, cover;
+    background-size: 100% 47.5%, cover;
   }
   .brif-mini {
     padding-top: 25px;
@@ -1095,6 +1099,7 @@ img {
   }
   .brif__interview {
     margin-left: 15px;
+    padding-bottom: 70px;
   }
   .brif__form {
     padding-left: 5px;
@@ -1133,6 +1138,7 @@ img {
   }
   .interview-list__text {
     font-size: 14px;
+    line-height: 16px;
   }
   .interview-list__item {
     margin-bottom: 25px;
@@ -1141,9 +1147,9 @@ img {
             align-items: center;
   }
   .form__title {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 25.35px;
-    margin-top: 73px;
+    margin-top: 10px;
   }
   .form__subtitle {
     font-size: 14px;
