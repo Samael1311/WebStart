@@ -1348,6 +1348,9 @@ img {
     margin-right: 10px;
     margin-bottom: 30px;
   }
+  .quality__item:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1370,6 +1373,9 @@ img {
     font-size: 18px;
     line-height: 22px;
     max-width: 260px;
+  }
+  .qualities-block div:last-child {
+    margin-bottom: 0;
   }
   .quality__text {
     font-size: 12px;
