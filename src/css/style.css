@@ -806,6 +806,10 @@ img {
   line-height: 20px;
 }
 
+.step__text span {
+  display: block;
+}
+
 .steps__title {
   margin: auto;
   margin-bottom: 40px;
@@ -853,7 +857,16 @@ img {
   .step {
     margin-bottom: 30px;
   }
+  .step:nth-child(3) {
+    margin-bottom: 40px;
+  }
+  .step:last-child {
+    margin-bottom: 0;
+  }
   .step__image {
+    margin-bottom: 30px;
+  }
+  .step:first-child {
     margin-bottom: 20px;
   }
   .step__text {
@@ -864,7 +877,7 @@ img {
     display: none;
   }
   .steps-mini {
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     padding-top: 0px;
   }
   .steps-block {
@@ -1087,11 +1100,17 @@ img {
   .form__title {
     font-size: 18px;
   }
+  .brif {
+    background-size: 100% 48%, cover;
+  }
+  .brif__form {
+    margin-top: 50px;
+  }
 }
 
 @media (max-width: 320px) {
   .brif {
-    background-size: 100% 47.5%, cover;
+    background-size: 100% 47%, cover;
   }
   .brif-mini {
     padding-top: 25px;
@@ -1150,6 +1169,7 @@ img {
     font-size: 17px;
     line-height: 25.35px;
     margin-top: 10px;
+    margin-right: 10px;
   }
   .form__subtitle {
     font-size: 14px;
@@ -1241,6 +1261,7 @@ img {
 .contacts-list__text span {
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
+  display: block;
 }
 
 @media (max-width: 576px) {

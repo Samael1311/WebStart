@@ -14,13 +14,12 @@
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=f2b2a70b-8fea-494f-9788-9097b85501f6&lang=ru_RU"
-		type="text/javascript">
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=f2b2a70b-8fea-494f-9788-9097b85501f6&lang=ru_RU">
 	</script>
 	<!-- Yandex.Metrika counter -->
-	<script src="js/metrics.js"></script> <noscript>
-		<div><img src="https://mc.yandex.ru/watch/53975824" style="position:absolute; left:-9999px;" alt="" /></div>
-	</noscript> <!-- /Yandex.Metrika counter -->
+	<script src="js/metrics.js"></script>
+
+
 </head>
 
 <body>
@@ -38,7 +37,8 @@
 							+7(495) 42-251-31
 						</a>
 					</div>
-					<button class="button navbar__button" onclick="ym(53975824, 'reachGoal', 'button'); return true;" id="button">Перезвоните мне</button>
+					<button class="button navbar__button" onclick="ym(53975824, 'reachGoal', 'button'); return true;"
+						id="button">Перезвоните мне</button>
 				</div>
 				<!-- /.navbar__info -->
 			</div>
@@ -94,7 +94,8 @@
 						и реализуем его!</h2>
 					<span class="section-subtitle offer__subtitle">Оставьте заявку на разработку
 						бесплатного дизайн-проекта!</span>
-					<form action="#" id="offer-form" class="form offer__form" method="get" onsubmit="ym(53975824, 'reachGoal', 'buttonDesign'); return true;">
+					<form action="#" id="offer-form" class="form offer__form" method="get"
+						onsubmit="ym(53975824, 'reachGoal', 'buttonDesign'); return true;">
 						<input type="text" name="username" class="input offer__input input-name" placeholder="Ваше имя">
 						<input type="tel" name="phone" class="input offer__input phone" placeholder="Ваш телефон">
 						<button class="button offer__button">Получить бесплатный дизайн-проект</button>
@@ -243,7 +244,7 @@
 						<div class="step__image">
 							<img src="img/steps/money.png" alt="money">
 						</div>
-						<p class="step__text">Рассчитываем смету согласовываем с Вами</p>
+						<p class="step__text">Рассчитываем смету согласовываем <span>с Вами</span></p>
 					</div>
 					<div class="step">
 						<div class="step__image">
@@ -341,12 +342,12 @@
 				<div class="contacts contacts-size">
 					<h3 class="contacts__title">Приезжайте к нам в гости! Проконсультируем Вас по всем вопросам ремонта</h3>
 					<ul class="contacts-list">
-						<span class="contacts-list__item">
+						<li class="contacts-list__item">
 							<span class="contacts-list__icon">
 								<img src="img/footer/map-placeholder.png" alt="map">
 							</span>
-							<span class="contacts-list__text">г. Москва <br><span>ул. Ленина, д. 10, корпус 2, оф. 308</span></span>
-						</span>
+							<span class="contacts-list__text">г. Москва <span>ул. Ленина, д. 10, корпус 2, оф. 308</span></span>
+						</li>
 						<li class="contacts-list__item">
 							<span class="contacts-list__icon">
 								<img src="img/footer/clock-with-white-face.png" alt="clock">
@@ -359,7 +360,7 @@
 								<img src="img/footer/phone-call-button.png" alt="call">
 							</span>
 							<span class="contacts-list__text">Телефон: <br>
-								<a href="tel: + 7(495)42-251-31">+ 7 (495) 42-251-31</a></span>
+								<a href="tel:+7(495)42-251-31">+7(495) 42-251-31</a></span>
 						</li>
 					</ul>
 				</div>
@@ -373,11 +374,14 @@
 		</div>
 	</div>
 
+
 	<div id="up" class="up"><img src="img/arrow.png" alt="arrow up"></div>
 
 	<!-- <script src="js/script.js"></script> -->
 
-
+	<noscript>
+		<div><img src="https://mc.yandex.ru/watch/53975824" style="position:absolute; left:-9999px;" alt="" /></div>
+	</noscript> <!-- /Yandex.Metrika counter -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="js/modal.js"></script>
@@ -392,42 +396,7 @@
 	<script src="js/jquery.maskedinput.min.js"></script>
 	<script src="js/validation.js"></script>
 
-	<script type="text/javascript">
-		ymaps.ready(init);
-
-		function init() {
-
-		}
-		ymaps.ready(function () {
-			var myMap = new ymaps.Map('map', {
-					center: [55.611409, 37.201122],
-					zoom: 9
-				}, {
-					searchControlProvider: 'yandex#search'
-				}),
-
-
-				MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-					'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-				),
-
-				myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-
-					hintContent: 'Ремонт квартир. Качественно и быстро! ',
-					balloonContent: 'Москва ул. Ленина, д. 10, корпус 2, оф. 308'
-				}, {
-
-					iconLayout: 'default#image',
-					iconImageHref: 'img/map-img.png',
-					iconImageSize: [30, 30]
-					//iconImageOffset: [-5, -38]
-				})
-
-			myMap.geoObjects
-				.add(myPlacemark);
-
-		});
-	</script>
+	<script src="js/yamaps.js"></script>
 
 </body>
 
